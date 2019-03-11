@@ -1,0 +1,47 @@
+</<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>表单</title>
+    <style>
+        legend{
+            color: red;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<header>
+    <h1>毕业生信息</h1>	
+</header>
+<body>
+    <form action="#" method="GET" >
+        <fieldset>
+            <legend>学生信息</legend>
+            姓&nbsp; 名
+            <input type="text" name="name1" autofocus="autofocus" required placeholder="请输入姓名">&nbsp;<span>*</span>
+            <br/>
+            学&nbsp; 号
+            <input type="text" name = "number1" required placeholder="请输入学号">&nbsp;<span>*</span>
+            <br/>
+            手&nbsp; 机
+            <input type="tel" name="tel1" required placeholder="请输入手机号">&nbsp;<span>*</span>
+            <br/>
+            邮&nbsp; 箱
+            <input type="email" name="email1" required placeholder="请输入邮箱地址">&nbsp;<span>*</span>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>录取情况</legend>
+            录取学校&nbsp;<input type="text" name="school">
+            <br/>
+            入学成绩&nbsp;<input type="text" name="grades">
+            <br/>
+            入学时间&nbsp;<input type="date" name="time">
+        </fieldset>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
