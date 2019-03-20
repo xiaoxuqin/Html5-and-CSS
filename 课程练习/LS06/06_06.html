@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>刷新页面会看到计数器在增长。</p>
+    <p>sessionStorage可以作为会话计数器，localStorage则可以作为Web应用访问计数器。</p>
+
+
+    <script>
+        if (sessionStorage.pagecount) {
+            //记录页面被刷新的次数，也就是判断是不是有这个数据项
+            sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;
+        } else {
+            sessionStorage.pagecount = 1;
+        }
+        document.write("在当前会话期间访问了" + sessionStorage.pagecount + "次");
+        // 关闭浏览器后再次打开，会重新开始计算
+
+        if (localStorage.pagecount) {
+            //记录页面被刷新的次数，也就是判断是不是有这个数据项
+            localStorage.pagecount = Number(localStorage.pagecount) + 1;
+        } else {
+            localStorage.pagecount = 1;
+        }
+        document.write("网站被访问过" + localStorage.pagecount + "次");
+    </script>
+
+</body>
+
+</html>

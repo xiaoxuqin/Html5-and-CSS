@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>06-04</title>
+  <script>
+    var storage = window.localStorage;
+    console.log(typeof storage);
+    // object
+    console.log(storage);
+    var data = {
+        name:'zhangsan',
+        hobby:'study'
+    };
+    var d = JSON.stringify(data);
+    console.log(typeof d);
+    // string
+    storage.setItem("data", d);
+    var json = storage.getItem("data");
+    console.log(typeof json);
+    // string
+    var jsonObj = JSON.parse(json);
+    console.log(typeof jsonObj);
+    // object
+    
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

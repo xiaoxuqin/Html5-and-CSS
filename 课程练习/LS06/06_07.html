@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>简单Web留言本</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h1>简单Web留言本</h1>
+    <textarea id="memo" cols="60" rows="10"></textarea><br>
+    <input type="button" value="添加" onclick="saveStorage('memo');" />
+    <input type="button" value="全部清除" onclick="clearStorage('msg');" />
+    <hr/>
+    <!-- 在 HTML 页面中创建一条水平线。 -->
+    <p id="msg"></p>
+</body>
+<script type="text/javascript">
+    function saveStorage(id) {
+        // 传入谁的id，就添加谁的内容， id是形参
+        // 调用这个函数的时候是点击添加按钮的时候， 而它操作的是 id="memo" 里面的内容
+        var data = document.getElementById(id).value;
+        // data 得到的是 用户输入的内容
+        var time = new Date().getTime();
+        // 时间
+        localStorage.setItem(time, data);
+        // 存储数据项
+        alert("数据已保存。");
+        loadStorage('msg');
+        // 对P标签里的内容进行修改
+    }
+
+    function loadStorage(id) {
+        // 很多的操作都是为了建表格
+        var result = '<table border="1">';
+        for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            var date = new Date();
+            date.setTime(key); 
+            // setTime() 方法以毫秒设置 Date 对象。
+            // 使用 setTime() 向 1970/01/01 添加毫秒，并显示新的日期和时间。
+            var datestr = date.toGMTString();
+            // 可根据格林威治时间 (GMT) 把 Date 对象转换为字符串，并返回结果。
+            result += '<tr><td>' + value + '</td><td>' + datestr + '</td></tr>';
+            // p标签内显示 value 值 和 时间
+        }
+        result += '</table>';
+        var target = document.getElementById(id);
+        target.innerHTML = result;
+        // p标签内显示 value 值 和 时间
+    }
+
+    function clearStorage() {
+        localStorage.clear();
+        alert("全部数据被清除。");
+        loadStorage('msg');
+        // 对P标签里的内容进行修改
+        // 同样是读取value 和 key值，这个时候值为空，所以p标签内的内容也就被清除掉
+    }
+</script>
+
+</html>
