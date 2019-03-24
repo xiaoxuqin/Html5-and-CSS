@@ -1,0 +1,116 @@
+</<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web 存储</title>
+    <style>
+        #shop {
+            width: 200px;
+            height: 40px;
+            border: 1px solid rgb(171, 186, 186);
+            outline: none;
+        }
+
+        #submit {
+            width: 120px;
+            height: 35px;
+            border: 1px solid rgb(171, 186, 186);
+            color: rgb(135, 135, 135);
+            background-color: rgb(237, 237, 237);
+            outline: none;
+        }
+
+        #recently {
+            margin-top: 0px;
+        }
+
+        #clear {
+            margin-bottom: 0%;
+            margin-right: 0%;
+            color: white;
+            background-color: rgb(224, 224, 224);
+            outline: none;
+            border: 0;
+            display: none;
+        }
+
+        #div {
+            width: 350px;
+            height: 500px;
+            float: left;
+        }
+
+        #cleardiv {
+            width: 30px;
+            height: 30px;
+            float: left;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入想查找的商品" id="shop">
+    <input type="submit" name="search" value="搜索" id="submit">
+    <p id="recently">最近搜索</p>
+    <div id="div"></div>
+    <div id="cleardiv">
+        <button id="clear">X</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+            var shop = document.getElementById("shop");
+            var submit = document.getElementById("submit");
+            var div = document.getElementById("div");
+            var clear = document.getElementById("clear");
+            // 页面加载，显示最近搜索的历史记录
+            if (window.localStorage) {
+                for (var x = 0; x < localStorage.length; x++) {
+                    var history = document.createElement("div");
+                    history.innerHTML = localStorage.getItem(x);
+                    history.style.backgroundColor = "rgb(224, 224, 224)";
+                    history.style.marginRight = "10px";
+                    history.style.marginBottom = "10px";
+                    history.style.float = "left";
+                    div.appendChild(history);
+                }
+            }
+            // "搜索框"失去焦点时颜色的变化
+            shop.onblur = function () {
+                shop.style.border = "1px solid rgb(171, 186, 186)";
+            }
+            // "搜索框"得到焦点时颜色的变化
+            shop.onfocus = function () {
+                shop.style.border = "2px solid rgb(235, 185, 112)";
+            }
+            //点击“搜索框”显示清空按键
+            shop.onclick = function () {
+                clear.style.display = "inline";
+            }
+            //   点击“搜索”，新增最近搜索历史，进行本地存储
+            submit.onclick = function () {
+                clear.style.display = "inline";
+                var history = document.createElement("div");
+                if (window.localStorage) {
+                    localStorage.setItem(localStorage.length, shop.value);
+                    history.innerHTML = shop.value;
+                    shop.value = "";
+                    history.style.backgroundColor = "rgb(224, 224, 224)";
+                    history.style.marginRight = "10px";
+                    history.style.marginBottom = "10px";
+                    history.style.float = "left";
+                    div.appendChild(history);
+                }
+            }
+            // 清空记录及本地存储
+            clear.onclick = function () {
+                localStorage.clear();
+                div.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
