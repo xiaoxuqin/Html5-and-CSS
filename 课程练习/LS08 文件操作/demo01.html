@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>使用FileList对象与file对象</title>
+</head>
+<body>
+	<script>
+		function ShowFileName(){
+			var file;
+			var file1;
+			file1 = document.getElementById("file");
+			console.log(file1.files);
+			for(var i=0; i<file1.files.length; i++){
+				console.log(file1.files[i]);
+			}
+		}
+	</script>
+
+	<input type="file" id="file" multiple/>
+	<input type="button" value="文件上传" onclick="ShowFileName();"/>
+</body>
+</html>
