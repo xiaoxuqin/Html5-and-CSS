@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>使用Blob对象显示文件信息</title>
+	<script>
+		function ShowFileType()
+		{
+		    var file;
+		    //得到用户选择的第一个文件 
+		    file = document.getElementById("file").files[0];
+            //files是属性  获取file对象
+			
+		    var size=document.getElementById("size");
+			size.innerHTML=file.size;  // 文件长度
+			
+		    var type=document.getElementById("type");
+		    type.innerHTML=file.type;  // 文件类型
+		}
+	</script>
+</head>
+<body>
+	选择文件：
+	<input type="file" id="file" multiple/>
+	<input type="button" value="显示文件信息" onclick="ShowFileType();"/>
+	<br/>
+	文件字节长度:<span id="size"></span><br/>
+	文件类型：<span id="type"></span>
+</body>
+</html>
