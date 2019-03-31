@@ -1,0 +1,42 @@
+</<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>拖拽图片</title>
+    <style type="text/css">
+        div {
+            border: 2px solid gray;
+            width: 180px;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <img src="images/taidi.jpg" id="dragimg" draggable="true" ondragstart="drag(event)" />
+</body>
+<script>
+    function drag(ev){
+        ev.dataTransfer.setData("Text", ev.target.id);
+        console.log(ev.target); // 原对象
+    }
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    function drop(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+        // alert("移动成功！");
+        console.log(ev.target); //目标对象
+    }
+</script>
+</html>
+<!-- 
+	1. 设置可拖放属性
+	2. 给原对象绑定一个拖放开始的事件
+	3. 去目标对象上写的两个事件,
+		取消默认属性
+ -->
