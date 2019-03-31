@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FileReader对象</title>
+</head>
+
+<body>
+    <input type="file" onchange="previewFile()" />
+    <br /> 
+    <img src="#" height="300px" alt="图片预览..." />
+
+    <!-- <script>
+        function previewFile() {
+            var preview = document.querySelector("img");//选择符合参数条件的第一个元素
+            var file = document.querySelector("input[type=file]").files[0];
+            //document.querySelector("input[type=file]")选择第一个input标签，并且它的type属性是file
+            var reader = new FileReader();
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+            //添加事件监听
+            reader.addEventListener("load", function () {
+                preview.src = reader.result;
+                console.log(reader.result);
+            });
+        }
+    </script> -->
+
+</body>
+
+
+<script>
+    function previewFile() {
+        var preview = document.querySelector("img");
+        // 选择符合条件的第一个元素
+        var file = document.querySelector("input[type = file]").files[0];
+
+        var reader = new FileReader();
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+        // addEventListener() 方法用于向指定元素添加事件句柄。
+        reader.addEventListener("load",
+            function () {
+                preview.src = reader.result;
+                console.log(reader.result);
+            });
+    }
+</script>
+</html>
+<!-- 
+    document.querySelector(" ");
+     选择符合条件的第一个元素
+ -->
+<!-- 
+    addEventListener() 方法用于向指定元素添加事件句柄。
+element.addEventListener(event, function, useCapture)
+event：必须属性； 字符串 ； 指定事件名；
+        不要使用 "on" 前缀， 例如，使用 "click" ,而不是使用 "onclick"。
+function：必须属性； 指定要事件触发时执行的函数； 
+useCapture：可选属性； 布尔值； 指定事件是否在捕获或冒泡阶段执行     
+    true - 事件句柄在捕获阶段执行
+    false- false- 默认。事件句柄在冒泡阶段执行
+ -->
