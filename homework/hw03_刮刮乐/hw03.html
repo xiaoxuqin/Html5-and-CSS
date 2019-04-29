@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>刮刮乐</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='div'>
+        <canvas id="canvas1" width="1024" height="1024"> 
+        </canvas>
+        <canvas id="canvas" width="1024" height="1024">
+        </canvas>
+    </div>
+</body>
+
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var canvas1 = document.getElementById("canvas1");
+        var ctx1 = canvas1.getContext("2d");
+
+        var a = Math.floor(Math.random()*4) ;
+        var img = new Image();
+        img.src = "img/" + a + ".png";
+        img.onload = function(){
+            ctx1.drawImage(img, 0, 0, 200, 100);
+        }
+
+        ctx.beginPath();
+        ctx.fillStyle = "rgb(204, 204, 204)";
+        ctx.fillRect(0, 0, 200, 100);
+        ctx.closePath();
+        canvas.onmousedown = function (){
+            var x = event.clientX;
+            var y = event.clientY;
+            ctx.globalCompositeOperation = "destination-out";
+            ctx.beginPath();
+            ctx.arc(x, y, 15, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+            canvas.onmousemove = function () {
+                var x = event.clientX;
+                var y = event.clientY;
+                ctx.globalCompositeOperation = "destination-out";
+                ctx.beginPath();
+                ctx.arc(x, y, 15, 0, 2*Math.PI);
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        canvas.onmouseup = function () {
+            canvas.onmousemove = function () {
+            }
+            var imgData = ctx.getImageData(0, 0, 200, 100).data;
+            var number = 0;
+            for (var i = 3; i < imgData.length; i += 4) {
+                if (imgData[i] === 0) {
+                    number++;
+                }
+            }
+            if (number > 100*200*0.85) {
+                console.log("ok");
+                ctx.clearRect(0, 0 , 200, 100);
+            }
+        }
+    }
+</script>
+
+</html>
