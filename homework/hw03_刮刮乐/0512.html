@@ -5,24 +5,47 @@
     <meta charset="UTF-8">
     <title>刮刮乐</title>
     <style>
-        div {
-            width: 200px;
-            height: 100px;
+        #div1 {
+            position: absolute;
+            width: 600px;
+            height: 210px;
+            background-image: url(img/0512.gif) ;
+            background-repeat:no-repeat;
+            top: -10px;
         }
         canvas {
             position: absolute;
             top: 0;
             left: 0;
         }
+        #text{
+            width: 550px;
+            position: absolute;
+            top: 210px;
+            color: rgb(233, 7, 7);
+            text-align: center;
+            text-shadow: 0px 0px 3px rgb(255, 131, 29);    
+		    font-size: 40px;
+		    font-weight: bold;
+		    font-family: 宋体;
+            display: none; 
+            background-image: url(img/heart.jpg) ;
+            background-repeat:repeat-x;
+        }
     </style>
 </head>
 
 <body>
-    <div id='div'>
+    <div id='div1'>
         <canvas id="canvas1" width="1024" height="1024"> 
+           
         </canvas>
         <canvas id="canvas" width="1024" height="1024">
+                
         </canvas>
+    </div>
+    <div id="text">
+        母亲节快乐哟
     </div>
 </body>
 
@@ -32,17 +55,11 @@
         var ctx = canvas.getContext("2d");
         var canvas1 = document.getElementById("canvas1");
         var ctx1 = canvas1.getContext("2d");
-
-        var a = Math.floor(Math.random()*4) ;       
-        var img = new Image();
-        img.src = "img/" + a + ".png";
-        img.onload = function(){
-            ctx1.drawImage(img, 0, 0, 200, 100);
-        }
+        var text = document.getElementById("text");
 
         ctx.beginPath();
         ctx.fillStyle = "rgb(204, 204, 204)";
-        ctx.fillRect(0, 0, 200, 100);
+        ctx.fillRect(0, 0, 600, 220);
         ctx.closePath();
         canvas.onmousedown = function (){
             var x = event.clientX;
@@ -65,16 +82,17 @@
         canvas.onmouseup = function () {
             canvas.onmousemove = function () {
             }
-            var imgData = ctx.getImageData(0, 0, 200, 100).data;
+            var imgData = ctx.getImageData(0, 0, 600, 220).data;
             var number = 0;
             for (var i = 3; i < imgData.length; i += 4) {
                 if (imgData[i] === 0) {
                     number++;
                 }
             }
-            if (number > 100*200*0.85) {
-                console.log("ok");
-                ctx.clearRect(0, 0 , 200, 100);
+            if (number > 600*210*0.45) {
+                ctx.clearRect(0, 0 , 600, 220);
+                text.style = "display:inline";
+
             }
         }
     }
