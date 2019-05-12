@@ -13,11 +13,6 @@
             background-repeat:no-repeat;
             top: -10px;
         }
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
         #text{
             width: 550px;
             position: absolute;
@@ -37,12 +32,7 @@
 
 <body>
     <div id='div1'>
-        <canvas id="canvas1" width="1024" height="1024"> 
-           
-        </canvas>
-        <canvas id="canvas" width="1024" height="1024">
-                
-        </canvas>
+        
     </div>
     <div id="text">
         母亲节快乐哟
@@ -51,50 +41,11 @@
 
 <script>
     window.onload = function () {
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        var canvas1 = document.getElementById("canvas1");
-        var ctx1 = canvas1.getContext("2d");
         var text = document.getElementById("text");
 
-        ctx.beginPath();
-        ctx.fillStyle = "rgb(204, 204, 204)";
-        ctx.fillRect(0, 0, 600, 220);
-        ctx.closePath();
-        canvas.onmousedown = function (){
-            var x = event.clientX;
-            var y = event.clientY;
-            ctx.globalCompositeOperation = "destination-out";
-            ctx.beginPath();
-            ctx.arc(x, y, 15, 0, 2 * Math.PI);
-            ctx.fill();
-            ctx.closePath();
-            canvas.onmousemove = function () {
-                var x = event.clientX;
-                var y = event.clientY;
-                ctx.globalCompositeOperation = "destination-out";
-                ctx.beginPath();
-                ctx.arc(x, y, 15, 0, 2*Math.PI);
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
-        canvas.onmouseup = function () {
-            canvas.onmousemove = function () {
-            }
-            var imgData = ctx.getImageData(0, 0, 600, 220).data;
-            var number = 0;
-            for (var i = 3; i < imgData.length; i += 4) {
-                if (imgData[i] === 0) {
-                    number++;
-                }
-            }
-            if (number > 600*210*0.45) {
-                ctx.clearRect(0, 0 , 600, 220);
-                text.style = "display:inline";
-
-            }
-        }
+        window.setInterval(function(){
+            text.style =  "display: inline"; 
+        }, 3000);      
     }
 </script>
 
