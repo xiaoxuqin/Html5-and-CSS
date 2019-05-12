@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>祝妈妈节日快乐</title>
+    <style>
+        #div1 {
+            position: absolute;
+            width: 600px;
+            height: 210px;
+            background-image: url(img/0512.gif) ;
+            background-repeat:no-repeat;
+            top: -10px;
+        }
+        #text{
+            width: 550px;
+            position: absolute;
+            top: 210px;
+            color: rgb(233, 7, 7);
+            text-align: center;
+            text-shadow: 0px 0px 3px rgb(255, 131, 29);    
+		    font-size: 40px;
+		    font-weight: bold;
+		    font-family: 宋体;
+            display: none; 
+            background-image: url(img/heart.jpg) ;
+            background-repeat:repeat-x;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='div1'>
+        
+    </div>
+    <div id="text">
+        母亲节快乐哟
+    </div>
+</body>
+
+<script>
+    window.onload = function () {
+        var text = document.getElementById("text");
+
+        window.setInterval(function(){
+            text.style =  "display: inline"; 
+        }, 3000);      
+    }
+</script>
+
+</html>
