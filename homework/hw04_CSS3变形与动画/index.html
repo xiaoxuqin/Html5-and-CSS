@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hw04_CSS3变形与动画</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+        #big{
+            width: 350px;
+            height: 420px;
+            border-top:  3px rgb(233, 233, 233) solid;
+            border-left:  3px rgb(233, 233, 233) solid;
+            border-right:  5px rgb(233, 233, 233) solid;
+            border-bottom:  5px rgb(233, 233, 233) solid;
+            position: absolute;
+            overflow: hidden;
+            margin: 50px 50px;
+            transition: all 0.5s;
+        }
+        span{
+            font-size: 12px;
+            margin-left: 22px;
+            color: rgb(174, 178, 175);
+            display: block;
+            position: absolute;
+            margin-top: 390px;
+        }
+        #canvas{
+            position: absolute;
+            left: 280px;
+            top: 20px;
+            z-index:1;
+        }
+        #picture{
+            width: 350px;
+            height: 230px;
+            background-image: url(img/zhanqiao.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            transition: all 0.5s;
+        }
+        #mengzhao1{
+            width: 350px;
+            height: 230px;
+            transition: all 0.5s;
+        }
+        #move{
+            width: 350px;
+            height: 230px;
+        }
+        #out{
+            width: 55px;
+            height: 21px;
+            background-color: rgb(253,117,70);
+            color: white;
+            position: relative;
+            text-align: center;
+            padding-top: 4px;
+            font-size: 13px;
+            margin-top: -25px;
+        }
+        #change{
+            margin-left: 18px;
+            margin-right: 18px;
+            width: 310px;
+            height: 230px;
+            margin-top: 25px; 
+        }
+        #title{
+            font-size: 25px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        #country{
+            color: rgb(253,117,70);
+            font-size: 20px;
+        }
+        #detials{
+            color: rgb(150, 153, 160);
+            font-size: 15px;
+            line-height: 25px;
+            font-family: '微软雅黑';
+            display: none; 
+            transition: all 0.5s;
+        }    
+        #big:hover{
+            border-top:  3px rgb(207, 207, 207) solid;
+            border-left:  3px rgb(207, 207, 207) solid;
+            border-right:  5px rgb(207, 207, 207) solid;
+            border-bottom:  5px rgb(207, 207, 207) solid;
+            transition: all 0.5s;
+        }
+        #big:hover #picture{
+            transform: scale(1.2, 1.2);
+            height:120px;
+            transition: all 0.5s;
+        }
+        #big:hover #mengzhao1{
+            background-color: rgb(89, 94, 90);
+            opacity: 0.4;
+            height: 120px;
+            transition: all 0.5s;
+        }
+        #big:hover #detials{
+            display: block; 
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="big">
+        <span>10分钟前&nbsp;&nbsp;&nbsp;&nbsp; 123评论</span>
+
+        <!-- 圆形日期 -->
+        <canvas id="canvas" width="40" height="40">
+        </canvas>
+
+        <!-- 背景图部分 -->
+        <div id="picture">
+           <div id="mengzhao1"> </div>
+        </div>
+
+        <!-- 可渐变部分 -->
+        <div id="move">
+            <div id="out">照片</div>
+            <div id="change">
+                <h5 id="title">青岛栈桥</h5>
+                <p id="country">国家AAAA级旅游景区</p>
+                <p id="detials">
+                    青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级名胜风景区。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    /* 画布实现日期的实时变动 */
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    var myDate = new Date();
+    var str = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
+    var date = myDate.getDate();
+    var month = str[myDate.getMonth()] + '月';
+
+    ctx.beginPath();
+    ctx.arc(20, 20, 20, 0, 2 * Math.PI);
+    ctx.fillStyle = 'rgb(253,117,70)';
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.font = '14px 微软雅黑';
+    ctx.fillStyle = 'white';
+    ctx.fillText(date, 10, 17);
+    ctx.fillText(month,8, 32);
+    ctx.closePath();
+
+</script>
+</html>
