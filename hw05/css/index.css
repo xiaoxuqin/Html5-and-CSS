@@ -1,0 +1,984 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(225, 225, 225);
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**********************************顶部部分******************************/
+
+#topPart {
+    width: 100%;
+    height: 560px;
+}
+
+/*****************  顶部黑条    ****************/
+
+#topBlack {
+    height: 45px;
+    background-color: black;
+}
+
+#topWord {
+    margin-top: 12px;
+    float: right;
+    color: white;
+    background-color: black;
+}
+
+#topWord img {
+    background-color: black;
+    margin-right: 5px;
+    display: inline;
+}
+
+#topWord a {
+    text-decoration: none;
+    color: white;
+}
+
+/******************  顶部导航栏  ***************/
+
+#topNav {
+    padding: 0;
+    height: 40px;
+    background-color: rgb(225, 225, 225);
+    z-index: 2;
+    position: relative;
+}
+
+#quickBut {
+    display: none;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    background-color: rgb(232, 66, 10);
+    position: absolute;
+    top: 20px;
+    right: 70px;
+}
+
+#col-1 a {
+    font-size: 20px;
+    text-align: center;
+}
+
+#topNav img {
+    margin-left: 10px;
+    margin-right: 110px;
+    display: inline;
+}
+
+/*****************  顶部轮播图  ****************/
+
+#generic {
+    width: 100%;
+    height: 435px;
+    position: relative;
+}
+
+#generic img {
+    width: 100%;
+    height: 435px;
+}
+
+#onSearch {
+    position: absolute;
+    height: 350px;
+    left: 15%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 70px;
+}
+
+#onSearch p {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(224, 224, 224);
+}
+
+#p1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#p2 {
+    width: 230px;
+    border-top: 1px rgb(110, 109, 109) solid;
+    padding-top: 10px;
+}
+
+#p3 {
+    width: 280px;
+    border-bottom: 1px rgb(110, 109, 109) solid;
+    padding-bottom: 10px;
+}
+
+#p4 {
+    display: none;
+    font-size: 20px;
+}
+
+#divSearch {
+    width: 500px;
+    height: 40px;
+    border: 3px black solid;
+    border-radius: 5px;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+}
+
+#divSearch input {
+    width: 200px;
+    padding-top: 8px;
+    border: none;
+    position: absolute;
+}
+
+#positionpng {
+    padding-top: 7px;
+    padding-left: 20px;
+    float: left;
+    width: 110px;
+    height: 34px;
+    background-color: rgb(211, 211, 216);
+}
+
+#positionpng img {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(211, 211, 216);
+}
+
+#positionpng span {
+    background-color: rgb(211, 211, 216);
+}
+
+#searchpng {
+    float: right;
+    width: 100px;
+    height: 35px;
+    background-color: rgb(230, 97, 9);
+}
+
+#searchpng img {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(230, 97, 9);
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+/***************************************中间上半部分*********************************/
+
+#centerPartOut {
+    width: 100%;
+    background-color: rgb(225, 225, 225);
+}
+
+#centerPartUp {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+/********************车辆接送****************/
+
+#carSend {
+    width: 1200px;
+    height: 365px;
+    position: relative;
+}
+
+#carSend img {
+    float: left;
+}
+
+#carText {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
+    width: 380px;
+    height: 140px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+}
+
+#carText p {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+#carP1 {
+    font-size: 30px;
+}
+
+#carDiv {
+    width: 265px;
+    height: 365px;
+    float: left;
+    background-color: rgb(20, 49, 109);
+    color: white;
+}
+
+#carDiv img {
+    background-color: rgb(20, 49, 109);
+    width: 100px;
+    height: 100px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    margin-left: 85px;
+}
+
+#carDiv p {
+    background-color: rgb(20, 49, 109);
+    margin-left: 100px;
+    width: 100px;
+    font-size: 18px;
+}
+
+#carDiv button {
+    background-color: rgb(20, 49, 109);
+    border: 1px white solid;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 30px;
+    width: 110px;
+    height: 30px;
+}
+
+/**********************车辆接送手机版*****************/
+
+#carPhone {
+    display: none;
+    margin-top: -70px;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+
+#carPhone img, p {
+    background-color: white;
+}
+
+#carPhone img {
+    margin-left: 40px;
+    margin-top: 45px;
+    float: left;
+}
+
+#carTextPhone {
+    float: left;
+    width: 300px;
+    height: 120px;
+    background-color: white;
+}
+
+#carPhone1 {
+    color: rgb(28, 80, 128);
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+#carPhone2 {
+    color: rgb(102, 102, 102);
+    margin-left: 25px;
+    margin-top: 35px;
+    line-height: 0px;
+    font-size: 15px;
+}
+
+#carPhone3 {
+    color: rgb(102, 102, 102);
+    margin-left: 25px;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+#carPhone button {
+    width: 165px;
+    height: 55px;
+    border: 1px rgb(181, 181, 181) solid;
+    border-radius: 10px;
+    margin-top: 65px;
+    margin-left: -10px;
+    background-color: white;
+    font-size: 20px;
+    color: rgb(102, 102, 102);
+}
+
+/***********************热门线路*********************/
+
+#routes {
+    width: 1200px;
+    height: 1150px;
+    margin-top: 30px;
+}
+
+#routesP1 {
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(225, 225, 225);
+}
+
+#routesP2 {
+    text-align: center;
+    font-size: 15px;
+    line-height: 5px;
+    background-color: rgb(225, 225, 225);
+}
+
+#routesJpg {
+    height: 1030px;
+    padding: 0;
+    margin-top: 35px;
+}
+
+#hotLeftA p {
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    margin-left: 45px;
+    line-height: 5px;
+    padding-top: 20px;
+}
+
+#hotLeftA span {
+    color: white;
+    font-size: 30px;
+    background-color: black;
+}
+
+#hotLeftB p {
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    margin-left: 45px;
+    line-height: 5px;
+    padding-top: 20px;
+}
+
+#hotLeftB span {
+    color: white;
+    font-size: 30px;
+    background-color: black;
+}
+
+#hotLeft1 {
+    height: 490px;
+    color: white;
+    position: relative;
+}
+
+#hotLeftA {
+    width: 588px;
+    height: 100px;
+    background-color: black;
+}
+
+#hotLeft2 {
+    height: 527px;
+    color: white;
+    position: relative;
+}
+
+#hotLeftB {
+    width: 588px;
+    height: 87px;
+    background-color: black;
+}
+
+#hotRight {
+    margin-left: -8px;
+    padding: 0;
+}
+
+#hotRight1 {
+    width: 608px;
+    height: 290px;
+    background: url(../img/hot3.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#hotRight2 {
+    width: 608px;
+    height: 360px;
+    background: url(../img/hot4.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#hotRight3 {
+    width: 608px;
+    height: 365px;
+    background: url(../img/hot5.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#hotRightText1, #hotRightText2, #hotRightText3 {
+    width: 608px;
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+}
+
+.hotRightText p {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 20px;
+    margin-left: 45px;
+    line-height: 5px;
+    padding-top: 20px;
+}
+
+.hotRightText span {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 30px;
+}
+
+/***********************热门路线手机端******************/
+
+#routesTextPhone {
+    display: none;
+}
+
+#routesTextPhone span {
+    color: red;
+    font-size: 30px;
+    background-color: white;
+}
+
+#routesTextPhone p {
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+.hotLeftPhone {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.hotLeftPhone p {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 20px;
+    margin-left: 45px;
+    line-height: 5px;
+    padding-top: 20px;
+}
+
+.hotLeftPhone span {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 30px;
+}
+
+#hotLeftAPhone {
+    width: 587px;
+    height: 80px;
+    position: absolute;
+    bottom: 90px;
+}
+
+#hotLeftBPhone {
+    width: 587px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+}
+
+.phoneSpan {
+    float: right;
+    margin-top: -50px;
+    margin-right: 30px;
+}
+
+#routesPhoneBut {
+    display: none;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border: 1px rgb(181, 181, 181) solid;
+    background-color: white;
+    color: rgb(102, 102, 102);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    outline: none;
+}
+
+/***************************签证推荐********************/
+
+#visa {
+    width: 1200px;
+    height: 850px;
+}
+
+#visaText p {
+    background-color: rgb(225, 225, 225);
+}
+
+#visaP1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#visaP2 {
+    text-align: center;
+    font-size: 15px;
+    line-height: 5px;
+}
+
+#visaP3 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+#Japan {
+    position: relative;
+}
+
+#Japan p {
+    padding-left: 50px;
+    padding-top: 10px;
+    font-size: 17px;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 70px;
+    color: rgb(212, 211, 211);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.visaFour {
+    position: relative;
+}
+
+.visaFour p {
+    padding-left: 50px;
+    font-size: 17px;
+    position: absolute;
+    bottom: -8px;
+    width: 100%;
+    height: 45px;
+    color: rgb(212, 211, 211);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#visaJpg span {
+    color: rgb(212, 211, 211);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#visaBut {
+    width: 200px;
+    height: 45px;
+    font-size: 25px;
+    border: 1px black solid;
+    color: black;
+    border-radius: 10px;
+    margin-top: 40px;
+    position: absolute;
+    left: 43%;
+}
+
+/* 签证推荐手机端文字 */
+
+#visaTextPhone {
+    display: none;
+}
+
+#visaTextPhone span {
+    color: red;
+    font-size: 30px;
+    background-color: white;
+}
+
+#visaTextPhone p {
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+/* 签证手机端图片及文字 */
+
+#phoneVisaJpg {
+    display: none;
+    width: 650px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#phoneVisaJpg p {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: -10px;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#phoneVisaJpg span {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 30px;
+}
+
+#phoneVisaJPG1 {
+    width: 270px;
+    height: 420px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+    background: url(../img/visa1.jpg) center no-repeat;
+    position: relative;
+}
+
+#phoneVisaJPG2 {
+    width: 330px;
+    height: 205px;
+    float: left;
+    background: url(../img/visa5.jpg) center no-repeat;
+    position: relative;
+}
+
+#phoneVisaJPG3 {
+    width: 330px;
+    height: 205px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background: url(../img/visa2.jpg) center no-repeat;
+    position: relative;
+}
+
+#phoneVisaBut {
+    display: none;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border: 1px rgb(181, 181, 181) solid;
+    color: rgb(102, 102, 102);
+    border-radius: 10px;
+    margin: 0 auto;
+    outline: none;
+}
+
+/*****************************************centerPartMiddle*****************************/
+
+#centerPartMiddle {
+    width: 100%;
+    height: 420px;
+    background: url(../img/Bbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*****************************************centerPartBottom*****************************/
+
+#centerPartBottom {
+    width: 100%;
+    /* margin-top: 30px; */
+}
+
+/***********************使命与愿景*****************/
+
+#wishText {
+    width: 100%;
+    height: 650px;
+    background: url(../img/back.png);
+}
+
+#wishText p {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#wishP1 {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#wishP2 {
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+/* 使命与愿景手机端 */
+
+#wishTextPhone {
+    display: none;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#wishTextPhone #phoneWish1 {
+    color: red;
+    font-size: 30px;
+}
+
+#wishTextPhone #phoneWish2 {
+    font-size: 20px;
+}
+
+#wishTextPhone p {
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+/* 服务理念 */
+
+#sevice {
+    width: 1200px;
+    margin: 0 auto;
+    height: 350px;
+}
+
+#sevice image {
+    float: left;
+}
+
+#seviceContent {
+    width: 704px;
+    height: 350px;
+    background: rgb(27, 77, 123);
+    float: right;
+    margin-bottom: 5px;
+}
+
+#seviceContent1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#seviceContent11 {
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+#seviceContent2 {
+    margin-top: 30px;
+    margin-left: 90px;
+    font-size: 17px;
+    line-height: 30px;
+    width: 532px;
+}
+
+#seviceContent p {
+    color: white;
+}
+
+#icon {
+    width: 100%;
+    height: 386px;
+    background-color: rgb(27, 77, 123);
+    margin-top: 5px;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+#icon * {
+    background-color: rgb(27, 77, 123);
+}
+
+.tubiao {
+    margin-top: 40px;
+    margin-left: 120px;
+    position: relative;
+}
+
+.iconin {
+    position: absolute;
+    left: 65px;
+    top: 45px;
+}
+
+.tubiao p {
+    position: absolute;
+    color: white;
+    left: 60px;
+    top: 120px;
+    font-size: 18px;
+}
+
+.iconText {
+    width: 320px;
+    height: 120px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+/* icon手机端 */
+
+#phoneIcon {
+    display: none;
+    width: 650px;
+    height: 650x;
+}
+
+#phoneIcon img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+#phoneYouShi {
+    width: 600px;
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.phoneIconO p {
+    font-size: 18px;
+    line-height: 15px;
+}
+
+.phoneIconO {
+    width: 100%;
+    height: 180px;
+    margin: 0 auto;
+    border-bottom: 1px rgb(218, 210, 210) solid;
+}
+
+#phoneIcon1 {
+    margin-top: 50px;
+    width: 400px;
+    float: right;
+}
+
+.phoneIconI {
+    margin-top: 70px;
+    width: 400px;
+    float: right;
+}
+
+/*****************************************bottomPart*****************************/
+
+#bottomPart {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+
+#bottomPartContent {
+    width: 1200px;
+    margin: 0 auto;
+    color: rgb(202, 202, 202);
+}
+
+.hezuo {
+    width: 120px;
+    height: 80px;
+    background-color: black;
+    float: left;
+}
+
+.hezuo img {
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.hezuo p {
+    background-color: black;
+    text-align: center;
+}
+
+.bottomP {
+    float: left;
+    color: white;
+    font-size: 15px;
+    background-color: black;
+    margin-right: 23px;
+}
+
+#hotPosition, #themSevice, #friendLink {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    margin: 0;
+}
+
+#hotPosition a, #themSevice a, #friendLink a {
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+}
+
+#hotPosition li, #themSevice li, #friendLink li {
+    float: left;
+    background-color: black;
+    color: rgb(202, 202, 202);
+    margin-right: 22px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#last {
+    width: 100%;
+    margin: 0 auto;
+    color: rgb(207, 195, 195);
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px rgb(202, 202, 202) solid;
+    text-align: center;
+    background-color: black;
+}
+
+/* 底部手机端 */
+
+#phoneBottomPart {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    height: 280px;
+    background-color: rgb(52, 50, 53);
+    padding-top: 100px;
+}
+
+#phoneBottomPart p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: rgb(52, 50, 53);
+}
+
+.phoneGray {
+    display: none;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(245, 245, 245);
+}

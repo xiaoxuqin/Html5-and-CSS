@@ -1,0 +1,184 @@
+@media screen and (max-width:768px) {
+    * {
+        background-color: white;
+    }
+    /******************************** 顶部 ************************/
+    #topPart {
+        width: 100%;
+        height: 485px;
+    }
+    /* <!-- 顶部导航栏 --> */
+    #topBlack {
+        display: none;
+    }
+    #quickBut {
+        display: block;
+    }
+    #topNav {
+        width: 650px;
+        height: 80px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        padding-top: 15px;
+        background-color: white;
+    }
+    #phoneNavBtu {
+        background-color: white;
+        border: none;
+    }
+    /* <!-- 顶部图片 --> */
+    #generic {
+        width: 100%;
+        height: 365px;
+        margin: 0 auto;
+        background: url(../img/banner.jpg) center no-repeat;
+    }
+    #p2, #p3, #generic a, #carouselImgO {
+        display: none;
+    }
+    #p4 {
+        display: block;
+    }
+    #divSearch {
+        width: 400px;
+        top: 50%;
+        left: 10%;
+    }
+    #positionpng {
+        width: 100px;
+    }
+    #searchpng {
+        width: 80px;
+        margin: 0 auto;
+    }
+    #searchpng img {
+        margin-left: 30px;
+    }
+    /******************************** 中间部分 ************************/
+    /************** 中上 ****************/
+    #centerPartUp {
+        width: 650px;
+        height: 1750px;
+        margin: 0 auto;
+    }
+    /*车辆接送手机版*/
+    #carSend {
+        display: none;
+    }
+    #carPhone {
+        margin-top: -40px;
+        height: 160px;
+        display: block;
+    }
+    #centerPartOut {
+        width: 100%;
+        background-color: white;
+    }
+    /* 热门路线 */
+    #routes {
+        width: 650px;
+        height: 1000px;
+        background-color: white;
+    }
+    #routesJpg {
+        width: 100%;
+        height: 1000px;
+        margin: 0 auto;
+        margin-left: 20px;
+    }
+    #routesText, #hotRight, #hotLeftA, #hotLeftB {
+        display: none;
+    }
+    #routesTextPhone, #routesPhoneBut {
+        display: block;
+    }
+    .hotLeftPhone {
+        display: block;
+    }
+    #hotLeft1 {
+        background-color: white;
+    }
+    #hotLeft2 {
+        margin-top: -70px;
+        height: 440px;
+        background-color: white;
+    }
+    /* 签证推荐 */
+    #visaText, #visaJpg, #visaBut {
+        display: none;
+    }
+    #visaTextPhone, #phoneVisaJpg, #phoneVisaBut {
+        display: block;
+    }
+    #visa {
+        width: 650px;
+        height: 850px;
+    }
+    /* 中间部分中间大图 */
+    #centerPartMiddle {
+        display: none;
+    }
+    /************** 中下 ****************/
+    #centerPartOut {
+        width: 100%;
+        height: 3580px;
+    }
+    /* 使命与愿景 */
+    #wishText {
+        width: 100%;
+        height: 700px;
+        background: url(../img/back.png);
+    }
+    #wishP1, #wishP2, #seviceContent1 {
+        display: none;
+    }
+    #wishTextPhone, #seviceContent11 {
+        display: block;
+    }
+    #sevice {
+        width: 650px;
+        margin: 0 auto;
+        height: 1700px;
+    }
+    #phoneLogo {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    #seviceContent p {
+        color: black;
+    }
+    #seviceContent {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+        background-color: white;
+    }
+    #seviceContent2 {
+        width: 650px;
+        font-size: 21px;
+        margin: 0 auto;
+    }
+    #phoneMission2 {
+        height: 330px;
+        width: 650px;
+        margin: 0 auto;
+    }
+    /* icon */
+    #icon {
+        display: none;
+    }
+    #phoneIcon {
+        display: block;
+    }
+    /* 底部 */
+    #bottomPart {
+        display: none;
+    }
+    #phoneBottomPart {
+        display: block;
+    }
+    .phoneGray {
+        display: block;
+    }
+}
